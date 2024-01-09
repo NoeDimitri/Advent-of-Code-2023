@@ -53,7 +53,6 @@ for y in range(len(grid)):
     for x in range(len(grid)):
         if grid[y][x] == 'S':
             toVisit.append((x,y,-1))
-            # bfs(x,y,-1, grid)
             flag = True
             break
     if flag:
@@ -76,8 +75,8 @@ while toVisit:
     if symbol_map[cur_symbol][Direction.EAST.value] and symbol_map[grid[y][x+1]][Direction.WEST.value]:
         toVisit.append((x+1,y, grid[y][x]))
 
-# for line in grid:
-#     for chr in line:
-#         print(chr, end = '')
-#     print()
+for line in grid:
+    for chr in line:
+        print(chr, end = '')
+    print()
 print(max_value)
